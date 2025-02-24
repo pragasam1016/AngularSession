@@ -49,6 +49,9 @@
                             Profile
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/employee">Employee</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -56,17 +59,16 @@
         <!-- Main Content Area -->
         <main class="col-md-6 col-lg-8 px-md-4">
             <div class="pt-3">
-                {{fromChild}}
+                <!-- {{fromChild}}
+                {{viewChildMessage}} -->
+
                 <router-outlet></router-outlet> <!-- For Angular routing content -->
-                {{viewChildMessage}}
             </div>
         </main>
 
         <!-- Right Side News/Events -->
         <aside class="col-md-3 col-lg-2 bg-light">
             <app-rightmenu [userName]="userName" (userMessageEmitter)="getData($event)"></app-rightmenu>
-            <app-rightmenu [userName]="userName" (userMessageEmitter)="getData($event)"></app-rightmenu>
-        
         </aside>
 
     </div>
