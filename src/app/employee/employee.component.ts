@@ -3,6 +3,7 @@ import { EmployeeService } from '../services/employee.service';
 import { EmployeeModel } from '../model/EmployeeModel';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { EmployeelistService } from '../services/employeelist.service';
 
 @Component({
   selector: 'app-employee',
@@ -15,7 +16,7 @@ public employee : EmployeeModel;
 
 public employeeList : EmployeeModel[];
 
-  constructor(private employeeService : EmployeeService){
+  constructor(private employeeService : EmployeeService,private employeelistService : EmployeelistService){
     this.employee = new EmployeeModel();
   }
   ngOnInit(): void {
@@ -27,6 +28,10 @@ public employeeList : EmployeeModel[];
   }
 
   public getEmployeeList(){
-    this.employeeService.getEmployees().subscribe(x => this.employeeList = x);
+    this.employeeService.getEmployees().subscribe(x => 
+      {
+        this.employeeList = x;
+        this.employeelistService.setEmployeeListData(x);
+      });
   }
 }
