@@ -13,6 +13,7 @@ export const routes: Routes = [
     {path:'profile',component:ProfileComponent},
     {path :'employee',component : EmployeeComponent},
     {path : 'employeeDetails' , component:EmployeelistComponent, canActivate :[authGuard]},
+    {path :'salary',loadChildren :() => import('./salary/salary.module').then(m => m.SalaryModule)},
     {path:'**',component:NotfoundComponent}//404
 
 ];
