@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SalaryRoutingModule } from './salary.routes';
+import { PfComponent } from './pf/pf.component';
 
 
 
@@ -8,7 +9,8 @@ import { SalaryRoutingModule } from './salary.routes';
   declarations: [],
   imports: [
     CommonModule,
-    SalaryRoutingModule
+    SalaryRoutingModule,
+    PfComponent
   ]
 })
 export class SalaryModule { }

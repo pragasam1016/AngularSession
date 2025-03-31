@@ -7,7 +7,8 @@ import { RightmenuComponent } from './rightmenu/rightmenu.component';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, RouterModule, RightmenuComponent],
+  imports: [FormsModule, RouterModule, 
+    RightmenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
