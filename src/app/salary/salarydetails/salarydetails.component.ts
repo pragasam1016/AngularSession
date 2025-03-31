@@ -12,6 +12,6 @@ export class SalarydetailsComponent {
   constructor(private router:Router) { }
 
   pf(){
-    this.router.navigate(['pf']);
+    this.router.navigate(['salary/pf']);
   }
 }
